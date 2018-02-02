@@ -1,13 +1,18 @@
 <?php
-	include_once("./credentials.php");
-	
-	function retrieve_members(){
+	include("connection.php");
+
+
+	class Data_Retriever{
 		
-		$sql_sentence = "CALL am_discipline.retrieve_members();";
-		$prepared = $connector->prepare($sql_sentence);
-		$prepared->execute();
-		$result = $prepared->fetchAll();
 		
-		return $result;
+		public function retrieve_members(){
+			$connection = new Connection();
+			$sql_sentence = "CALL am_discipline.retrieve_members();";
+			$prepared = $connection->createConnection()->prepare($sql_sentence);
+			$prepared->execute();
+			$result = $prepared->fetchAll();
+			
+			return $result;
+		}
 	}
 ?>

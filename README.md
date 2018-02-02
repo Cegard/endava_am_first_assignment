@@ -32,4 +32,12 @@
 
 ### Mysql install and configuration.
 
-  1. Download the .msi file according to your SO version from [dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/), After download is completed run the .msi file and 
+  1. Download the .msi file according to your SO version from [dev.mysql.com/downloads/mysql/](https://dev.mysql.com/downloads/mysql/), After download is completed run the .msi file and follow the wizard steps. It's suggested to put a user and password other than root.
+
+### PHP install and configuration.
+
+  1. Download the PHP files from [windows.php.net](http://windows.php.net/) according to the version you want to use.
+
+  2. Extract the files in a safe location like **C:\Apache24\PHP**.
+
+  3. In the folder with the extracted files copy one of the php.ini files (there's one for development and other for production environments) and paste it 
