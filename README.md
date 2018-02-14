@@ -12,7 +12,7 @@
 
   3. **Move files**
 
-   Unzip the files in a computers location, it's suggested to unzip 'em in **C:/Apache24**.
+   Unzip the files in a folder like **C:/Apache24**.
 
   4. **Run Apache server**
 
@@ -38,6 +38,27 @@
 
   1. Download the PHP files from [windows.php.net](http://windows.php.net/) according to the version you want to use.
 
-  2. Extract the files in a safe location like **C:\Apache24\PHP**.
+  2. Extract the files in a safe location like **C:\PHP**.
 
-  3. In the folder with the extracted files copy one of the php.ini files (there's one for development and other for production environments) and paste it 
+  3. In the folder with the extracted files select one of the php.ini files (there's one for development and other for production environments) and rename it to be **php.ini**.
+
+  4. Move to the folder **C:/Apache24/conf** and open the file **httpd.conf** in this file put the next line at the end of the LoadModule section:
+
+  LoadModule php**X**\_module "C:/PHP/php**X**apache2_4.dll"  and replace the **X** with the version of PHP you've installed previously. 
+
+  Put the next line into the IfModule tag:
+
+  
+  AddType application/x-httpd-php .php
+
+ Put the next line at the end of the file 
+
+  PHPIniDir "C:/PHP" 
+
+ Make sure to use the folder where you've installed PHP.
+
+  5. Now you can test your installation, in the folder **C:/Apache24/htdocs** create a file called **info.php** into this file put
+
+ `<?php phpinfo(); ?>`
+
+
