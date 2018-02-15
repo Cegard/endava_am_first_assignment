@@ -62,3 +62,4 @@
  `<?php phpinfo(); ?>`
 
 
+  After this open a new window on your browser and go the address 127.0.0.1/info.php and you should see a page with with your php installation info.
